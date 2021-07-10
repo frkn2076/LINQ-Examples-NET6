@@ -48,6 +48,45 @@ namespace LINQ_Examples_NET6
             defaultIfEmptyExample.Sample1();
             defaultIfEmptyExample.Sample2();
 
+            var distinctExample = new DistinctExample();
+            distinctExample.Sample1();
+            distinctExample.Sample2();
+
+            var distinctByExample = new DistinctByExample();
+            distinctByExample.Sample1();
+            distinctByExample.Sample2();
+
+            var elementAtExample = new ElementAtExample();
+            elementAtExample.Sample1();
+            elementAtExample.Sample2();
+
+            var elementAtOrDefaultExample = new ElementAtOrDefaultExample();
+            elementAtOrDefaultExample.Sample1();
+            elementAtOrDefaultExample.Sample2();
+
+            var emptyExample = new EmptyExample();
+            emptyExample.Sample1();
+
+            var exceptExample = new ExceptExample();
+            exceptExample.Sample1();
+            exceptExample.Sample2();
+
+            var exceptByExample = new ExceptByExample();
+            exceptByExample.Sample1();
+            exceptByExample.Sample2();
+
+            var firstExample = new FirstExample();
+            firstExample.Sample1();
+            firstExample.Sample2();
+
+            var firstOrDefaultExample = new FirstOrDefaultExample();
+            firstOrDefaultExample.Sample1();
+            firstOrDefaultExample.Sample2();
+            firstOrDefaultExample.Sample3();
+            firstOrDefaultExample.Sample4();
+
+            var groupByExample = new GroupByExample();
+            groupByExample.Sample1();
         }
     }
 }
