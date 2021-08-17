@@ -102,6 +102,20 @@ namespace LINQ_Examples_NET6
             var intersectByExample = new IntersectByExample();
             intersectByExample.Sample1();
             intersectByExample.Sample2();
+
+            var joinExample = new JoinExample();
+            joinExample.Sample1();
+            joinExample.Sample2();
+
+            var lastExample = new LastExample();
+            lastExample.Sample1();
+            lastExample.Sample2();
+
+            var lastOrDefaultExample = new LastOrDefaultExample();
+            lastOrDefaultExample.Sample1();
+            lastOrDefaultExample.Sample2();
+            lastOrDefaultExample.Sample3();
+            lastOrDefaultExample.Sample4();
         }
     }
 }
