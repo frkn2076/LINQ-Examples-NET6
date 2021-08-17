@@ -87,6 +87,15 @@ namespace LINQ_Examples_NET6
 
             var groupByExample = new GroupByExample();
             groupByExample.Sample1();
+            groupByExample.Sample2();
+            groupByExample.Sample3();
+            groupByExample.Sample4();
+
+            var groupJoinExample = new GroupJoinExample();
+            groupJoinExample.Sample1();
+            groupJoinExample.Sample2();
+
+
         }
     }
 }

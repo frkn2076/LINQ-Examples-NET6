@@ -1,14 +1,13 @@
 ﻿namespace LINQ_Examples_NET6.Models
 {
-    class User
+    class Pet
     {
         public string Name { get; set; }
-        public string Surname { get; set; }
-
-        public User(string name, string surname)
+        public string Owner { get; set; }
+        public Pet(string name, string owner)
         {
             Name = name;
-            Surname = surname;
+            Owner = owner;
         }
     }
 }

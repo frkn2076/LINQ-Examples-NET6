@@ -9,7 +9,7 @@ namespace LINQ_Examples_NET6.Samples
     {
         public void Sample1()
         {
-            var first = new List<User>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("Tom", "Hiddlestone") };
+            var first = new List<Person>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("Tom", "Hiddlestone") };
             var second = new List<string>() { "Tom", "Hugh" };
             var result = first.ExceptBy(second, x => x.Name);
             //  result = IEnumerable<User>() { new("Leonardo", "Dicaprio"), new("TOM", "Sawyer") }
@@ -17,7 +17,7 @@ namespace LINQ_Examples_NET6.Samples
 
         public void Sample2()
         {
-            var first = new List<User>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("Tom", "Hiddlestone") };
+            var first = new List<Person>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("Tom", "Hiddlestone") };
             var second = new List<string>() { "ToM", "HUGh" };
             var result = first.ExceptBy(second, x => x.Name, new IgnoreCaseComparer());
             //  result = IEnumerable<User>() { new("Leonardo", "Dicaprio") }
