@@ -95,7 +95,13 @@ namespace LINQ_Examples_NET6
             groupJoinExample.Sample1();
             groupJoinExample.Sample2();
 
+            var intersectExample = new IntersectExample();
+            intersectExample.Sample1();
+            intersectExample.Sample2();
 
+            var intersectByExample = new IntersectByExample();
+            intersectByExample.Sample1();
+            intersectByExample.Sample2();
         }
     }
 }
