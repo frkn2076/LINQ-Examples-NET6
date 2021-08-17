@@ -23,7 +23,7 @@ namespace LINQ_Examples_NET6.Samples
             var colors1 = new List<string>() { "Red", "Blue", "White", "Black" };
             var colors2 = new List<string>() { "White", "Gray", "black" };
 
-            var result = colors1.Join(colors2, x => x, x => x, (res1, res2) => res1,  new IgnoreCaseComparer());
+            var result = colors1.Join(colors2, x => x, x => x, (res1, res2) => res1,  new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<string> { "White", "Black" }
         }
     }

@@ -18,7 +18,7 @@ namespace LINQ_Examples_NET6.Samples
         {
             var first = new List<string>() { "Red", "Green", "Blue", "Black" };
             var second = new List<string>() { "BLACK", "BLue", "White", "Yellow" };
-            var result = first.Except(second, new IgnoreCaseComparer());
+            var result = first.Except(second, new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<string> { "Red", "Green" }
         }
     }

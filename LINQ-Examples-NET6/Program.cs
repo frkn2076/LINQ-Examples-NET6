@@ -116,6 +116,30 @@ namespace LINQ_Examples_NET6
             lastOrDefaultExample.Sample2();
             lastOrDefaultExample.Sample3();
             lastOrDefaultExample.Sample4();
+
+            var longCountExample = new LongCountExample();
+            longCountExample.Sample1();
+            longCountExample.Sample2();
+
+            var maxExample = new MaxExample();
+            maxExample.Sample1();
+            maxExample.Sample2();
+            maxExample.Sample3();
+            maxExample.Sample4();
+
+            var maxByExample = new MaxByExample();
+            maxByExample.Sample1();
+            maxByExample.Sample2();
+
+            var minExample = new MinExample();
+            minExample.Sample1();
+            minExample.Sample2();
+            minExample.Sample3();
+            minExample.Sample4();
+
+            var minByExample = new MinByExample();
+            minByExample.Sample1();
+            minByExample.Sample2();
         }
     }
 }

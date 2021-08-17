@@ -20,7 +20,7 @@ namespace LINQ_Examples_NET6.Samples
             var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
             var colors2 = new List<string>() { "Red", "Purple", "black", "Green" };
 
-            var result = colors1.Intersect(colors2, new IgnoreCaseComparer());
+            var result = colors1.Intersect(colors2, new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<string> { "Red", "Green", "Black" } 
         }
     }

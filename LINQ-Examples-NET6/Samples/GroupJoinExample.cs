@@ -48,7 +48,7 @@ namespace LINQ_Examples_NET6.Samples
                              {
                                  OwnerName = person,
                                  Pets = petCollection.Select(pet => pet.Name)
-                             }, new IgnoreCaseComparer());
+                             }, new IgnoreCaseEqualityComparer());
 
             //  result = IEnumerable<GroupJoinIterator>  { [
             //  { OwnerName = "Magnus", Pets = ["Daisy"] },

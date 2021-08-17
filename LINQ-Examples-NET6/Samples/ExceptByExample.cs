@@ -19,7 +19,7 @@ namespace LINQ_Examples_NET6.Samples
         {
             var first = new List<Person>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("Tom", "Hiddlestone") };
             var second = new List<string>() { "ToM", "HUGh" };
-            var result = first.ExceptBy(second, x => x.Name, new IgnoreCaseComparer());
+            var result = first.ExceptBy(second, x => x.Name, new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<User>() { new("Leonardo", "Dicaprio") }
         }
     }

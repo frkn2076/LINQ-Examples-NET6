@@ -16,7 +16,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample2()
         {
             var colors = new List<string>() { "Red", "RED", "Blue", "Black", "BluE" };
-            var result = colors.Distinct(new IgnoreCaseComparer());
+            var result = colors.Distinct(new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<string> { "Red", "Blue", "Black" }
         }
     }

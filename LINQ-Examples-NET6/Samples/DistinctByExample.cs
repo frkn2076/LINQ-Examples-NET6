@@ -17,7 +17,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample2()
         {
             var colors = new List<Person>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("tom", "Hiddlestone") };
-            var result = colors.DistinctBy(x => x.Name, new IgnoreCaseComparer());
+            var result = colors.DistinctBy(x => x.Name, new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<User>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks") }
         }
     }

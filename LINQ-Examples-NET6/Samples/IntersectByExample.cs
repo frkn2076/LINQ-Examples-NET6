@@ -20,7 +20,7 @@ namespace LINQ_Examples_NET6.Samples
             var colors1 = new List<string>() { "Red", "Blue", "White", "Black" };
             var colors2 = new List<string>() { "R", "b", "black", "Green" };
 
-            var result = colors1.IntersectBy(colors2, x => x.Substring(0, 1), new IgnoreCaseComparer());
+            var result = colors1.IntersectBy(colors2, x => x.Substring(0, 1), new IgnoreCaseEqualityComparer());
             //  result = IEnumerable<string> { "Red", "Blue" } 
         }
     }
