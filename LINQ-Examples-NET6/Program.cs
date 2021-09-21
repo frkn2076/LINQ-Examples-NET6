@@ -173,6 +173,18 @@ namespace LINQ_Examples_NET6
             selectManyExample.Sample2();
             selectManyExample.Sample3();
             selectManyExample.Sample4();
+
+            var sequenceEqualExample = new SequenceEqualExample();
+            sequenceEqualExample.Sample1();
+            sequenceEqualExample.Sample2();
+
+            var singleExample = new SingleExample();
+            singleExample.Sample1();
+            singleExample.Sample2();
+
+            var singleOrDefaultExample = new SingleOrDefaultExample();
+            singleOrDefaultExample.Sample1();
+            singleOrDefaultExample.Sample2();
         }
     }
 }
