@@ -163,6 +163,16 @@ namespace LINQ_Examples_NET6
 
             var reverseExample = new ReverseExample();
             reverseExample.Sample1();
+
+            var selectExample = new SelectExample();
+            selectExample.Sample1();
+            selectExample.Sample2();
+
+            var selectManyExample = new SelectManyExample();
+            selectManyExample.Sample1();
+            selectManyExample.Sample2();
+            selectManyExample.Sample3();
+            selectManyExample.Sample4();
         }
     }
 }
