@@ -140,6 +140,29 @@ namespace LINQ_Examples_NET6
             var minByExample = new MinByExample();
             minByExample.Sample1();
             minByExample.Sample2();
+
+            var ofTypeExample = new OfTypeExample();
+            ofTypeExample.Sample1();
+
+            var orderByExample = new OrderByExample();
+            orderByExample.Sample1();
+            orderByExample.Sample2();
+
+            var orderByDescendingExample = new OrderByDescendingExample();
+            orderByDescendingExample.Sample1();
+            orderByDescendingExample.Sample2();
+
+            var prependExample = new PrependExample();
+            prependExample.Sample1();
+
+            var rangeExample = new RangeExample();
+            rangeExample.Sample1();
+
+            var repeatExample = new RepeatExample();
+            repeatExample.Sample1();
+
+            var reverseExample = new ReverseExample();
+            reverseExample.Sample1();
         }
     }
 }
