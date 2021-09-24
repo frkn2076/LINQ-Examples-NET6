@@ -185,6 +185,32 @@ namespace LINQ_Examples_NET6
             var singleOrDefaultExample = new SingleOrDefaultExample();
             singleOrDefaultExample.Sample1();
             singleOrDefaultExample.Sample2();
+
+            var skipExample = new SkipExample();
+            skipExample.Sample1();
+
+            var skipLastExample = new SkipLastExample();
+            skipLastExample.Sample1();
+
+            var skipWhileExample = new SkipWhileExample();
+            skipWhileExample.Sample1();
+            skipWhileExample.Sample2();
+
+            var sumExample = new SumExample();
+            sumExample.Sample1();
+            sumExample.Sample2();
+
+            var takeExample = new TakeExample();
+            takeExample.Sample1();
+            takeExample.Sample2();
+
+            var takeLastExample = new TakeLastExample();
+            takeLastExample.Sample1();
+
+            var takeWhileExample = new TakeWhileExample();
+            takeWhileExample.Sample1();
+            takeWhileExample.Sample2();
+
         }
     }
 }
