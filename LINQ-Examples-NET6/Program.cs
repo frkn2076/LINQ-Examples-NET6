@@ -211,6 +211,17 @@ namespace LINQ_Examples_NET6
             takeWhileExample.Sample1();
             takeWhileExample.Sample2();
 
+            var thenByExample = new ThenByExample();
+            thenByExample.Sample1();
+            thenByExample.Sample2();
+
+            var thenByDescendingExample = new ThenByDescendingExample();
+            thenByDescendingExample.Sample1();
+            thenByDescendingExample.Sample2();
+
+            var toArray = new ToArrayExample();
+            toArray.Sample1();
+
         }
     }
 }
