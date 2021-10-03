@@ -1,8 +1,4 @@
-﻿using LINQ_Examples_NET6.Comparer;
-using LINQ_Examples_NET6.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using LINQ_Examples_NET6.Models;
 
 namespace LINQ_Examples_NET6.Samples
 {

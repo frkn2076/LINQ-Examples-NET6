@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples
 {
     public class LastOrDefaultExample
     {

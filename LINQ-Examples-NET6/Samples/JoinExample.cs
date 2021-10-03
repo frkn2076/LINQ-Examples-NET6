@@ -17,6 +17,8 @@ namespace LINQ_Examples_NET6.Samples
 
         public void Sample2()
         {
+            ArgumentNullException.ThrowIfNull(nameof(ArgumentNullException));   
+
             var colors1 = new List<string>() { "Red", "Blue", "White", "Black" };
             var colors2 = new List<string>() { "White", "Gray", "black" };
 

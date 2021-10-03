@@ -1,7 +1,4 @@
 ﻿using LINQ_Examples_NET6.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace LINQ_Examples_NET6.Samples
 {

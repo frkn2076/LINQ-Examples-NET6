@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples
 {
     class EmptyExample
     {
