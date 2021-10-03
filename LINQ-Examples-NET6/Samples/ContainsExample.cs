@@ -17,7 +17,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample2()
         {
             var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
-            var result = colors.Contains("RED", new IgnoreCaseEqualityComparer());
+            var result = colors.Contains("RED", StringComparer.OrdinalIgnoreCase);
             //  result = true
         }
     }

@@ -1,9 +1,6 @@
-﻿using LINQ_Examples_NET6.Comparer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Examples_NET6.Samples
 {
@@ -23,7 +20,7 @@ namespace LINQ_Examples_NET6.Samples
             var colors1 = new List<string>() { "Red", "Blue", "White", "Black" };
             var colors2 = new List<string>() { "White", "Gray", "black" };
 
-            var result = colors1.Join(colors2, x => x, x => x, (res1, res2) => res1,  new IgnoreCaseEqualityComparer());
+            var result = colors1.Join(colors2, x => x, x => x, (res1, res2) => res1, StringComparer.OrdinalIgnoreCase);
             //  result = IEnumerable<string> { "White", "Black" }
         }
     }

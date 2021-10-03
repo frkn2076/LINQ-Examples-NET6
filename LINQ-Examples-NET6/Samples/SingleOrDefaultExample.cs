@@ -13,7 +13,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result1 = colors1.SingleOrDefault();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains more than one element"
             }
@@ -34,7 +34,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result1 = colors.SingleOrDefault(x => x.Length > 3);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains more than one element"
             }

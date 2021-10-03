@@ -1,5 +1,6 @@
 ﻿using LINQ_Examples_NET6.Comparer;
 using LINQ_Examples_NET6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,7 +18,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample2()
         {
             var colors = new List<Person>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks"), new("TOM", "Sawyer"), new("tom", "Hiddlestone") };
-            var result = colors.DistinctBy(x => x.Name, new IgnoreCaseEqualityComparer());
+            var result = colors.DistinctBy(x => x.Name, StringComparer.OrdinalIgnoreCase);
             //  result = IEnumerable<User>() { new("Leonardo", "Dicaprio"), new("Tom", "Hanks") }
         }
     }

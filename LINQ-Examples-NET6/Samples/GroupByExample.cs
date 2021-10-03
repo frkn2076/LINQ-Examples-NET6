@@ -1,4 +1,4 @@
-﻿using LINQ_Examples_NET6.Comparer;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,14 +23,14 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample3()
         {
             var colors = new List<string>() { "Red", "Green", "blue", "Black" };
-            var result = colors.GroupBy(x => x.Substring(0, 1), new IgnoreCaseEqualityComparer()).ToList();
+            var result = colors.GroupBy(x => x.Substring(0, 1), StringComparer.OrdinalIgnoreCase).ToList();
             //  result = IEnumerable<IGrouping<string, string>>  { { Key: "R", ["Red"] }, { Key: "G", ["Green"] }, { Key: "b", ["blue", "Black"] } }
         }
 
         public void Sample4()
         {
             var colors = new List<string>() { "Red", "Green", "blue", "Black" };
-            var result = colors.GroupBy(x => x.Substring(0, 1), x => x.Substring(0, 1), new IgnoreCaseEqualityComparer()).ToList();
+            var result = colors.GroupBy(x => x.Substring(0, 1), x => x.Substring(0, 1), StringComparer.OrdinalIgnoreCase).ToList();
             //  result = IEnumerable<IGrouping<string, char>>  { { Key: "R", ['R'] }, { Key: "G", ['G'] }, { Key: "b", ['b', 'B'] } }
         }
     }

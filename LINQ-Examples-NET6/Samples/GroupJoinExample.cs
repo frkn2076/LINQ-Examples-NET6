@@ -1,5 +1,5 @@
-﻿using LINQ_Examples_NET6.Comparer;
-using LINQ_Examples_NET6.Models;
+﻿using LINQ_Examples_NET6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -48,7 +48,7 @@ namespace LINQ_Examples_NET6.Samples
                              {
                                  OwnerName = person,
                                  Pets = petCollection.Select(pet => pet.Name)
-                             }, new IgnoreCaseEqualityComparer());
+                             }, StringComparer.OrdinalIgnoreCase);
 
             //  result = IEnumerable<GroupJoinIterator>  { [
             //  { OwnerName = "Magnus", Pets = ["Daisy"] },

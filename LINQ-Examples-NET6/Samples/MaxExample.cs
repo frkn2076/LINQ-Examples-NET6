@@ -1,4 +1,5 @@
 ﻿using LINQ_Examples_NET6.Comparer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,7 +31,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample4()
         {
             var letters = new List<string>() { "A", "C", "d", "B", "D" };
-            var result = letters.Max(new IgnoreCaseComparer());
+            var result = letters.Max(StringComparer.OrdinalIgnoreCase);
             //  result = "d"
         }
     }

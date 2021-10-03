@@ -222,6 +222,12 @@ namespace LINQ_Examples_NET6
             var toArray = new ToArrayExample();
             toArray.Sample1();
 
+            var toDictionaryExample = new ToDictionaryExample();
+            toDictionaryExample.Sample1();
+            toDictionaryExample.Sample2();
+            toDictionaryExample.Sample3();
+            toDictionaryExample.Sample4();
+
         }
     }
 }

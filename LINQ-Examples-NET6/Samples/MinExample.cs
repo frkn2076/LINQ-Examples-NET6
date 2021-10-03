@@ -1,4 +1,4 @@
-﻿using LINQ_Examples_NET6.Comparer;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,7 +30,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample4()
         {
             var letters = new List<string>() { "A", "C", "d", "B", "a" };
-            var result = letters.Min(new IgnoreCaseComparer());
+            var result = letters.Min(StringComparer.OrdinalIgnoreCase);
             //  result = "A"
         }
     }

@@ -1,4 +1,5 @@
 ﻿using LINQ_Examples_NET6.Comparer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +17,7 @@ namespace LINQ_Examples_NET6.Samples
         public void Sample2()
         {
             var colors = new List<string>() { "Gray", "Blue", "pink", "Purple" };
-            var result = colors.MaxBy(x => x.Substring(0,1), new IgnoreCaseComparer());
+            var result = colors.MaxBy(x => x.Substring(0,1), StringComparer.OrdinalIgnoreCase);
             //  result = "pink"
         }
     }

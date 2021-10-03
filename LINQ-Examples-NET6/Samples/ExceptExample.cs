@@ -1,4 +1,4 @@
-﻿using LINQ_Examples_NET6.Comparer;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,7 +18,7 @@ namespace LINQ_Examples_NET6.Samples
         {
             var first = new List<string>() { "Red", "Green", "Blue", "Black" };
             var second = new List<string>() { "BLACK", "BLue", "White", "Yellow" };
-            var result = first.Except(second, new IgnoreCaseEqualityComparer());
+            var result = first.Except(second, StringComparer.OrdinalIgnoreCase);
             //  result = IEnumerable<string> { "Red", "Green" }
         }
     }

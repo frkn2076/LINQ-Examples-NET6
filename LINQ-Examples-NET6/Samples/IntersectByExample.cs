@@ -1,4 +1,4 @@
-﻿using LINQ_Examples_NET6.Comparer;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,7 +20,7 @@ namespace LINQ_Examples_NET6.Samples
             var colors1 = new List<string>() { "Red", "Blue", "White", "Black" };
             var colors2 = new List<string>() { "R", "b", "black", "Green" };
 
-            var result = colors1.IntersectBy(colors2, x => x.Substring(0, 1), new IgnoreCaseEqualityComparer());
+            var result = colors1.IntersectBy(colors2, x => x.Substring(0, 1), StringComparer.OrdinalIgnoreCase);
             //  result = IEnumerable<string> { "Red", "Blue" } 
         }
     }

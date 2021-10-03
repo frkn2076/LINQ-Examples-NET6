@@ -13,7 +13,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result1 = colors1.Single();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains more than one element"
             }
@@ -23,7 +23,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result2 = colors2.Single();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains no elements"
             }
@@ -40,7 +40,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result1 = colors.Single(x => x.Length > 3);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains more than one element"
             }
@@ -49,7 +49,7 @@ namespace LINQ_Examples_NET6.Samples
             {
                 var result1 = colors.Single(x => x.Length > 7);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ex = "Sequence contains no elements"
             }
