@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 
-namespace LINQ_Examples_NET6.Samples
+namespace LINQ_Examples_NET6.Samples;
+public class OfTypeExample
 {
-    public class OfTypeExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var items = new ArrayList() { "White", 1, 2.0, "George" };
-            var result = items.OfType<string>();
-            //  IEnumerable<string> { "White", "George" }
-        }
+        var items = new ArrayList() { "White", 1, 2.0, "George" };
+        var result = items.OfType<string>();
+        //  IEnumerable<string> { "White", "George" }
     }
 }

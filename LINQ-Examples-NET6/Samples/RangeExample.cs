@@ -1,11 +1,9 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+class RangeExample
 {
-    class RangeExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var result = Enumerable.Range(2, 5);
-            //  result = IEnumerable<int> { 2, 3, 4, 5, 6}
-        }
+        var result = Enumerable.Range(2, 5);
+        //  result = IEnumerable<int> { 2, 3, 4, 5, 6}
     }
 }

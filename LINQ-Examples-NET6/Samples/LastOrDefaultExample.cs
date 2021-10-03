@@ -1,49 +1,47 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+public class LastOrDefaultExample
 {
-    public class LastOrDefaultExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LastOrDefault();
-            //  result = "Black"
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LastOrDefault();
+        //  result = "Black"
 
-            var colors2 = new List<string>();
-            var result2 = colors2.LastOrDefault();
-            //  result = null
-        }
+        var colors2 = new List<string>();
+        var result2 = colors2.LastOrDefault();
+        //  result = null
+    }
 
-        public void Sample2()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LastOrDefault("White");
-            //  result = "Black"
+    public void Sample2()
+    {
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LastOrDefault("White");
+        //  result = "Black"
 
-            var colors2 = new List<string>();
-            var result2 = colors2.LastOrDefault("White");
-            //  result = "White"
-        }
+        var colors2 = new List<string>();
+        var result2 = colors2.LastOrDefault("White");
+        //  result = "White"
+    }
 
-        public void Sample3()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LastOrDefault(x => x.Length < 5);
-            //  result = "Blue"
+    public void Sample3()
+    {
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LastOrDefault(x => x.Length < 5);
+        //  result = "Blue"
 
-            var colors2 = new List<string>();
-            var result2 = colors2.LastOrDefault(x => x.Length < 5);
-            //  result = null
-        }
+        var colors2 = new List<string>();
+        var result2 = colors2.LastOrDefault(x => x.Length < 5);
+        //  result = null
+    }
 
-        public void Sample4()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LastOrDefault(x => x.Length < 5, "White");
-            //  result = "Blue"
+    public void Sample4()
+    {
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LastOrDefault(x => x.Length < 5, "White");
+        //  result = "Blue"
 
-            var colors2 = new List<string>() { "Purple" };
-            var result2 = colors2.LastOrDefault(x => x.Length < 5, "White");
-            //  result = null
-        }
+        var colors2 = new List<string>() { "Purple" };
+        var result2 = colors2.LastOrDefault(x => x.Length < 5, "White");
+        //  result = null
     }
 }

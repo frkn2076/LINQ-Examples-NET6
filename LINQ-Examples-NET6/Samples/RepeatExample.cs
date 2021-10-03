@@ -1,11 +1,9 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+class RepeatExample
 {
-    class RepeatExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var result = Enumerable.Repeat(".Net", 4);
-            //  result = IEnumerable<string> { ".Net", ".Net", ".Net", ".Net" }
-        }
+        var result = Enumerable.Repeat(".Net", 4);
+        //  result = IEnumerable<string> { ".Net", ".Net", ".Net", ".Net" }
     }
 }

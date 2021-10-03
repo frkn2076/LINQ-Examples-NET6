@@ -1,12 +1,10 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+class TakeLastExample
 {
-    class TakeLastExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var colors = new List<string>() { "Red", "Green", "Blue", "Black", "White" };
-            var result = colors.TakeLast(2);
-            //  result = IEnumerable<string>() { "Black", "White" }
-        }
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black", "White" };
+        var result = colors.TakeLast(2);
+        //  result = IEnumerable<string>() { "Black", "White" }
     }
 }

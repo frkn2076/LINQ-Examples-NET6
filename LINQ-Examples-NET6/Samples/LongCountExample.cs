@@ -1,19 +1,17 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+public class LongCountExample
 {
-    public class LongCountExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LongCount();
-            //  result = 4
-        }
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LongCount();
+        //  result = 4
+    }
 
-        public void Sample2()
-        {
-            var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
-            var result = colors.LongCount(x => x.Length > 3);
-            //  result = 3
-        }
+    public void Sample2()
+    {
+        var colors = new List<string>() { "Red", "Blue", "Purple", "Black" };
+        var result = colors.LongCount(x => x.Length > 3);
+        //  result = 3
     }
 }

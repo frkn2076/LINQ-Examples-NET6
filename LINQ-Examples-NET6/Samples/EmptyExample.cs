@@ -1,11 +1,9 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+class EmptyExample
 {
-    class EmptyExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var result = Enumerable.Empty<int>();
-            //  result = IEnumerable<int> { }
-        }
+        var result = Enumerable.Empty<int>();
+        //  result = IEnumerable<int> { }
     }
 }

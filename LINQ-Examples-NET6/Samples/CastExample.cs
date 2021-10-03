@@ -1,12 +1,10 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+class CastExample
 {
-    class CastExample
+    public void Sample1()
     {
-        public void Sample1()
-        {
-            var numbers = new List<object>() { 1, 2, 3, 4, 5 };
-            var result = numbers.Cast<int>();
-            //  result = IEnumerable<int> { 1, 2, 3, 4, 5 }
-        }
+        var numbers = new List<object>() { 1, 2, 3, 4, 5 };
+        var result = numbers.Cast<int>();
+        //  result = IEnumerable<int> { 1, 2, 3, 4, 5 }
     }
 }
