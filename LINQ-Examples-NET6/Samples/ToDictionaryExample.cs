@@ -1,5 +1,5 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class ToDictionaryExample
+internal class ToDictionaryExample
 {
     public void Sample1()
     {

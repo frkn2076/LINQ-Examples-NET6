@@ -227,5 +227,22 @@ class Program
         toDictionaryExample.Sample3();
         toDictionaryExample.Sample4();
 
+        var toHashSetExample = new ToHashSetExample();
+        toHashSetExample.Sample1();
+        toHashSetExample.Sample2();
+
+        var toListExample = new ToListExample();
+        toListExample.Sample1();
+
+        var toLookupExample = new ToLookupExample();
+        toLookupExample.Sample1();
+        toLookupExample.Sample2();
+        toLookupExample.Sample3();
+        toLookupExample.Sample4();
+
+        var tryGetNonEnumeratedCountExample = new TryGetNonEnumeratedCountExample();
+        tryGetNonEnumeratedCountExample.Sample1();
+
+
     }
 }
