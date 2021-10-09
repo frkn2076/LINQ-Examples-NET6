@@ -222,7 +222,7 @@ namespace UnitTest
         {
             var sample = new ElementAtOrDefaultExample();
             var actual = sample.Sample2();
-            Assert.AreEqual(null, actual);
+            Assert.IsNull(actual);
         }
 
         [Test]
@@ -238,7 +238,7 @@ namespace UnitTest
         {
             var sample = new ElementAtOrDefaultExample();
             var actual = sample.Sample4();
-            Assert.AreEqual(null, actual);
+            Assert.IsNull(actual);
         }
 
         [Test]
@@ -322,7 +322,7 @@ namespace UnitTest
         {
             var sample = new FirstOrDefaultExample();
             var actual = sample.Sample2();
-            Assert.AreEqual(null, actual);
+            Assert.IsNull(actual);
         }
 
         [Test]
@@ -346,7 +346,7 @@ namespace UnitTest
         {
             var sample = new FirstOrDefaultExample();
             var actual = sample.Sample5();
-            Assert.AreEqual(null, actual);
+            Assert.IsNull(actual);
         }
 
         [Test]
@@ -439,7 +439,7 @@ namespace UnitTest
             var expectedKey1 = new List<string>() { "Boots" };
             var expectedKey2 = new List<string>() { "Barley" };
             var expectedKey3 = new List<string>() { "Whiskers" };
-            
+
             Assert.AreEqual("Magnus", actualAsList[0].Name);
             Assert.AreEqual(expectedKey0, actualAsList[0].Pets);
             Assert.AreEqual("Terry", actualAsList[1].Name);
@@ -469,6 +469,389 @@ namespace UnitTest
             Assert.AreEqual(expectedKey2, actualAsList[2].Pets);
             Assert.AreEqual("Charlotte", actualAsList[3].Name);
             Assert.AreEqual(expectedKey3, actualAsList[3].Pets);
+        }
+
+        [Test]
+        public void IntersectBy_Sample1()
+        {
+            var sample = new IntersectByExample();
+            var actual = sample.Sample1();
+            var expected = new List<string> { "Red" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IntersectBy_Sample2()
+        {
+            var sample = new IntersectByExample();
+            var actual = sample.Sample2();
+            var expected = new List<string> { "Red", "Blue" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Join_Sample1()
+        {
+            var sample = new JoinExample();
+            var actual = sample.Sample1();
+            var expected = new List<string> { "White" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Join_Sample2()
+        {
+            var sample = new JoinExample();
+            var actual = sample.Sample2();
+            var expected = new List<string> { "White", "Black" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Last_Sample1()
+        {
+            var sample = new LastExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual("Black", actual);
+        }
+
+        [Test]
+        public void Last_Sample2()
+        {
+            var sample = new FirstOrDefaultExample();
+            var actual = sample.Sample2();
+            Assert.IsNull(actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample1()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual("Black", actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample2()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample2();
+            Assert.IsNull(actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample3()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample3();
+            Assert.AreEqual("Black", actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample4()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample4();
+            Assert.AreEqual("White", actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample5()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample5();
+            Assert.AreEqual("Blue", actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample6()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample6();
+            Assert.IsNull(actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample7()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample7();
+            Assert.AreEqual("Blue", actual);
+        }
+
+        [Test]
+        public void LastOrDefault_Sample8()
+        {
+            var sample = new LastOrDefaultExample();
+            var actual = sample.Sample8();
+            Assert.AreEqual("White", actual);
+        }
+
+        [Test]
+        public void LongCount_Sample1()
+        {
+            var sample = new LongCountExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual(4, actual);
+        }
+
+        [Test]
+        public void LongCount_Sample2()
+        {
+            var sample = new LongCountExample();
+            var actual = sample.Sample2();
+            Assert.AreEqual(3, actual);
+        }
+
+        [Test]
+        public void MaxBy_Sample1()
+        {
+            var sample = new MaxByExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual("Purple", actual);
+        }
+
+        [Test]
+        public void MaxBy_Sample2()
+        {
+            var sample = new MaxByExample();
+            var actual = sample.Sample2();
+            Assert.AreEqual("pink", actual);
+        }
+
+        [Test]
+        public void Max_Sample1()
+        {
+            var sample = new MaxExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual(5, actual);
+        }
+
+        [Test]
+        public void Max_Sample2()
+        {
+            var sample = new MaxExample();
+            var actual = sample.Sample2();
+            Assert.AreEqual(6, actual);
+        }
+
+        [Test]
+        public void Max_Sample3()
+        {
+            var sample = new MaxExample();
+            var actual = sample.Sample3();
+            Assert.AreEqual("D1", actual);
+        }
+
+        [Test]
+        public void Max_Sample4()
+        {
+            var sample = new MaxExample();
+            var actual = sample.Sample4();
+            Assert.AreEqual("d", actual);
+        }
+
+        [Test]
+        public void MinBy_Sample1()
+        {
+            var sample = new MinByExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual("Red", actual);
+        }
+
+        [Test]
+        public void MinBy_Sample2()
+        {
+            var sample = new MinByExample();
+            var actual = sample.Sample2();
+            Assert.AreEqual("Blue", actual);
+        }
+
+        [Test]
+        public void Min_Sample1()
+        {
+            var sample = new MinExample();
+            var actual = sample.Sample1();
+            Assert.AreEqual(1, actual);
+        }
+
+        [Test]
+        public void Min_Sample2()
+        {
+            var sample = new MinExample();
+            var actual = sample.Sample2();
+            Assert.AreEqual(2, actual);
+        }
+
+        [Test]
+        public void Min_Sample3()
+        {
+            var sample = new MinExample();
+            var actual = sample.Sample3();
+            Assert.AreEqual("a1", actual);
+        }
+
+        [Test]
+        public void Min_Sample4()
+        {
+            var sample = new MinExample();
+            var actual = sample.Sample4();
+            Assert.AreEqual("A", actual);
+        }
+
+        [Test]
+        public void OfType_Sample1()
+        {
+            var sample = new OfTypeExample();
+            var actual = sample.Sample1();
+            var expected = new List<string> { "White", "George" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OrderByDescending_Sample1()
+        {
+            var sample = new OrderByDescendingExample();
+            var actual = sample.Sample1();
+            var expected = new List<Pet>() {
+                new Pet("Whiskers", "Charlotte"),
+                new Pet("Daisy", "Magnus"),
+                new Pet("Boots", "Terry"),
+                new Pet("Barley", "Terry")
+            };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OrderByDescending_Sample2()
+        {
+            var sample = new OrderByDescendingExample();
+            var actual = sample.Sample2();
+            var expected = new List<Pet>() {
+                new Pet("Whiskers", "Charlotte"),
+                new Pet("Barley", "Terry"),
+                new Pet("Boots", "Terry"),
+                new Pet("Daisy", "Magnus")
+            };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OrderBy_Sample1()
+        {
+            var sample = new OrderByExample();
+            var actual = sample.Sample1();
+            var expected = new List<Pet>() {
+                new Pet("Barley", "Terry"),
+                new Pet("Boots", "Terry"),
+                new Pet("Daisy", "Magnus"),
+                new Pet("Whiskers", "Charlotte")
+            };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void OrderBy_Sample2()
+        {
+            var sample = new OrderByExample();
+            var actual = sample.Sample2();
+            var expected = new List<Pet>() {
+                new Pet("Boots", "Terry"),
+                new Pet("Daisy", "Magnus"),
+                new Pet("Barley", "Terry"),
+                new Pet("Whiskers", "Charlotte")
+            };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Prepend_Sample1()
+        {
+            var sample = new PrependExample();
+            var actual = sample.Sample1();
+            var expected = new List<string>() { "White", "Red", "Green", "Blue", "Black" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Range_Sample1()
+        {
+            var sample = new RangeExample();
+            var actual = sample.Sample1();
+            var expected = new List<int>() { 2, 3, 4, 5, 6 };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Repeat_Sample1()
+        {
+            var sample = new RepeatExample();
+            var actual = sample.Sample1();
+            var expected = new List<string>() { ".Net", ".Net", ".Net", ".Net" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Reverse_Sample1()
+        {
+            var sample = new ReverseExample();
+            var actual = sample.Sample1();
+            var expected = new List<string>() { "Black", "Blue", "Green", "Red" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Select_Sample1()
+        {
+            var sample = new SelectExample();
+            var actual = sample.Sample1();
+            var expected = new List<int>() { 3, 5, 4, 5 };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Select_Sample2()
+        {
+            var sample = new SelectExample();
+            var actual = sample.Sample2();
+            var expected = new List<string>() { "Red-0", "Green-1", "Blue-2", "Black-3" };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void SelectMany_Sample1()
+        {
+            var sample = new SelectManyExample();
+            var actual = sample.Sample1();
+            var expected = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void SelectMany_Sample2()
+        {
+            var sample = new SelectManyExample();
+            var actual = sample.Sample2();
+            var expected = new List<int>() { 0, 0, 0, 4, 5, 6, 14, 16, 18 };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void SelectMany_Sample3()
+        {
+            var sample = new SelectManyExample();
+            var actual = sample.Sample3();
+            var expected = new List<int>() { 7, 8, 9, 19, 20, 21, 31, 32, 33 };
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void SelectMany_Sample4()
+        {
+            var sample = new SelectManyExample();
+            var actual = sample.Sample4();
+            var expected = new List<int>() { 6, 6, 6, 19, 20, 21, 38, 40, 42 };
+            Assert.AreEqual(expected, actual);
         }
     }
 }
