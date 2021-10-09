@@ -1,12 +1,11 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+public class ToListExample
 {
-    internal class ToListExample
+    public IEnumerable<string> Sample1()
     {
-        public void Sample1()
-        {
-            IEnumerable<string> colors = new List<string>() { "Red", "Green", "Blue", "Black" };
-            var result = colors.ToList();
-            //  result = List<string> { "Red", "Green", "Blue", "Black" }
-        }
+        IEnumerable<string> colors = new List<string>() { "Red", "Green", "Blue", "Black" };
+        var result = colors.ToList();
+        //  result = List<string> { "Red", "Green", "Blue", "Black" }
+        return result;
     }
 }

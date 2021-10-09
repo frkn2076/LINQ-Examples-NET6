@@ -1,22 +1,30 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class SequenceEqualExample
+public class SequenceEqualExample
 {
-    public void Sample1()
+    public bool Sample1()
     {
         var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
         var colors2 = new List<string>() { "Red", "Green", "Blue", "Black" };
-        var colors3 = new List<string>() { "Black", "Red", "Green", "Blue", };
-        var result1 = Enumerable.SequenceEqual(colors1, colors2);
-        var result2 = Enumerable.SequenceEqual(colors1, colors3);
-        //  result1 = true
-        //  result2 = false
+        var result = Enumerable.SequenceEqual(colors1, colors2);
+        //  result = true
+        return result;
     }
 
-    public void Sample2()
+    public bool Sample2()
+    {
+        var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
+        var colors2 = new List<string>() { "Black", "Red", "Green", "Blue", };
+        var result = Enumerable.SequenceEqual(colors1, colors2);
+        //  result = false
+        return false;
+    }
+
+    public bool Sample3()
     {
         var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
         var colors2 = new List<string>() { "red", "GrEen", "Blue", "Black" };
         var result = Enumerable.SequenceEqual(colors1, colors2, StringComparer.OrdinalIgnoreCase);
         //  result = true
+        return result;
     }
 }

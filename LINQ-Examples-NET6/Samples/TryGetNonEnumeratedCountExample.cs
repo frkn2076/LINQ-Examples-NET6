@@ -1,18 +1,23 @@
 ﻿using LINQ_Examples_NET6.Custome;
 
 namespace LINQ_Examples_NET6.Samples;
-internal class TryGetNonEnumeratedCountExample
+public class TryGetNonEnumeratedCountExample
 {
-    public void Sample1()
+    public (bool, int) Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
-        var result = colors.TryGetNonEnumeratedCount(out int count1);
+        var result = colors.TryGetNonEnumeratedCount(out int count);
         //  result = true (no iteration needed to find count)
-        //  count1 = 4    (no iteration needed so returned count)
+        //  count = 4    (no iteration needed so returned count)
+        return (result, count);
+    }
 
+    public (bool, int) Sample2()
+    {
         var customeItems = new CustomeItems();
-        var result2 = customeItems.TryGetNonEnumeratedCount(out int count2);
-        //  result2 = false (iteration needed to find count)
-        //  count2  = 0     (iteration need so didn't return the count)
+        var result = customeItems.TryGetNonEnumeratedCount(out int count);
+        //  result = false (iteration needed to find count)
+        //  count  = 0     (iteration need so didn't return the count)
+        return (result, count);
     }
 }

@@ -1,17 +1,19 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class SkipWhileExample
+public class SkipWhileExample
 {
-    public void Sample1()
+    public IEnumerable<string> Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black", "White" };
         var result = colors.SkipWhile(x => x.Length < 5);
         //  result = IEnumerable<string>() { "Green", "Blue", "Black", "White" }
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<string> Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black", "White" };
         var result = colors.SkipWhile((v, i) => v.Length - i > 2);
         //  result = IEnumerable<string>() { "Blue", "Black", "White" }
+        return result;
     }
 }

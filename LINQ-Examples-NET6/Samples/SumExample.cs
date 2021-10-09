@@ -1,17 +1,19 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class SumExample
+public class SumExample
 {
-    public void Sample1()
+    public int Sample1()
     {
         var numbers = new List<int>() { 1, 2, 5, 4, 3 };
         var result = numbers.Sum();
         //  result = 15
+        return result;
     }
 
-    public void Sample2()
+    public int Sample2()
     {
         var numbers = new List<int>() { 1, 2, 5, 4, 3 };
         var result = numbers.Sum(x => x + 1);
         //  result = 20
+        return result;
     }
 }

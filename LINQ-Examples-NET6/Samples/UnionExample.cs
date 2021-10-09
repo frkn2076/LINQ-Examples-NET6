@@ -1,20 +1,22 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-internal class UnionExample
+public class UnionExample
 {
-    public void Sample1()
+    public IEnumerable<string> Sample1()
     {
         var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
         var colors2 = new List<string>() { "Purple", "White", "blue", "Red" };
         var result = colors1.Union(colors2);
         //  result = IEnumerable<string>() { "Red", "Green", "Blue", "Black", "Purple", "White", "blue" }
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<string> Sample2()
     {
         var colors1 = new List<string>() { "Red", "Green", "Blue", "Black" };
         var colors2 = new List<string>() { "Purple", "White", "blue", "Red" };
         var result = colors1.Union(colors2, StringComparer.OrdinalIgnoreCase);
         //  result = IEnumerable<string>() { "Red", "Green", "Blue", "Black", "Purple", "White" }
+        return result;
     }
 }
 

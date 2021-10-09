@@ -1,17 +1,19 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-internal class WhereExample
+public class WhereExample
 {
-    public void Sample1()
+    public IEnumerable<string> Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Where(x => x.Length > 4);
         //  result = IEnumerable<string> { "Green", "Black" }
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<string> Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Where((v,i) => v.Length - i > 2);
         //  result = IEnumerable<string> { "Red", "Green" }
+        return result;
     }
 }

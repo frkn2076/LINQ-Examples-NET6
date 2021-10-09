@@ -1,19 +1,19 @@
-﻿namespace LINQ_Examples_NET6.Samples
+﻿namespace LINQ_Examples_NET6.Samples;
+public class ToHashSetExample
 {
-    internal class ToHashSetExample
+    public HashSet<string> Sample1()
     {
-        public void Sample1()
-        {
-            var colors = new List<string>() { "Red", "Green", "Blue", "Black", "red" };
-            var result = colors.ToHashSet();
-            //  result = HashSet<string> { "Red", "Green", "Blue", "Black", "red" }
-        }
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black", "red" };
+        var result = colors.ToHashSet();
+        //  result = HashSet<string> { "Red", "Green", "Blue", "Black", "red" }
+        return result;
+    }
 
-        public void Sample2()
-        {
-            var colors = new List<string>() { "Red", "Green", "Blue", "Black", "red" };
-            var result = colors.ToHashSet(StringComparer.OrdinalIgnoreCase);
-            //  result = HashSet<string> { "Red", "Green", "Blue", "Black" }
-        }
+    public HashSet<string> Sample2()
+    {
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black", "red" };
+        var result = colors.ToHashSet(StringComparer.OrdinalIgnoreCase);
+        //  result = HashSet<string> { "Red", "Green", "Blue", "Black" }
+        return result;
     }
 }
