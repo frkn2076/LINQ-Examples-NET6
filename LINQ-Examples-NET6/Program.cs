@@ -243,6 +243,21 @@ class Program
         var tryGetNonEnumeratedCountExample = new TryGetNonEnumeratedCountExample();
         tryGetNonEnumeratedCountExample.Sample1();
 
+        var unionByExample = new UnionByExample();
+        unionByExample.Sample1();
+        unionByExample.Sample2();
 
+        var unionExample = new UnionExample();
+        unionExample.Sample1();
+        unionExample.Sample2();
+
+        var whereExample = new WhereExample();
+        whereExample.Sample1();
+        whereExample.Sample2();
+
+        var zipExample = new ZipExample();
+        zipExample.Sample1();
+        zipExample.Sample2();
+        zipExample.Sample3();
     }
 }

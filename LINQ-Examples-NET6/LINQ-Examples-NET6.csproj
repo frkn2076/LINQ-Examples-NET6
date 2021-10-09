@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>LINQ_Examples_NET6</RootNamespace>
+    <RootNamespace>LINQ-Examples-NET6</RootNamespace>
   </PropertyGroup>
 
 </Project>
