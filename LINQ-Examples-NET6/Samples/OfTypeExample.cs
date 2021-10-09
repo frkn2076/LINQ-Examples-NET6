@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace LINQ_Examples_NET6.Samples;
+﻿namespace LINQ_Examples_NET6.Samples;
 public class OfTypeExample
 {
     public IEnumerable<string> Sample1()
