@@ -1,9 +1,9 @@
 ﻿using LINQ_Examples_NET6.Models;
 
 namespace LINQ_Examples_NET6.Samples;
-class GroupJoinExample
+public class GroupJoinExample
 {
-    public void Sample1()
+    public IEnumerable<Owner> Sample1()
     {
         var barley = new Pet("Barley", "terry");
         var boots = new Pet("Boots", "Terry");
@@ -13,12 +13,8 @@ class GroupJoinExample
         var people = new List<string> { "Magnus", "Terry", "terry", "Charlotte" };
         var pets = new List<Pet> { barley, boots, whiskers, daisy };
 
-        var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) =>
-                         new
-                         {
-                             OwnerName = person,
-                             Pets = petCollection.Select(pet => pet.Name)
-                         });
+        var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) 
+            => new Owner(person, petCollection.Select(x => x.Name).ToList()));
 
         //  result = IEnumerable<GroupJoinIterator>  { [
         //  { OwnerName = "Magnus", Pets = ["Daisy"] },
@@ -26,10 +22,10 @@ class GroupJoinExample
         //  { OwnerName = "terry", Pets = ["Barley"] },
         //  { OwnerName = "Charlotte", Pets = ["Whiskers"] }
         //  ] }
-
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<Owner> Sample2()
     {
         var barley = new Pet("Barley", "terry");
         var boots = new Pet("Boots", "Terry");
@@ -39,12 +35,8 @@ class GroupJoinExample
         var people = new List<string> { "Magnus", "Terry", "terry", "Charlotte" };
         var pets = new List<Pet> { barley, boots, whiskers, daisy };
 
-        var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) =>
-                         new
-                         {
-                             OwnerName = person,
-                             Pets = petCollection.Select(pet => pet.Name)
-                         }, StringComparer.OrdinalIgnoreCase);
+        var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) 
+            => new Owner(person, petCollection.Select(x => x.Name).ToList()), StringComparer.OrdinalIgnoreCase);
 
         //  result = IEnumerable<GroupJoinIterator>  { [
         //  { OwnerName = "Magnus", Pets = ["Daisy"] },
@@ -52,6 +44,6 @@ class GroupJoinExample
         //  { OwnerName = "terry", Pets = ["Barley", "Boots"] },
         //  { OwnerName = "Charlotte", Pets = ["Whiskers"] }
         //  ] }
-
+        return result;
     }
 }

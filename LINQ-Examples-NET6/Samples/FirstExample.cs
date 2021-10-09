@@ -1,25 +1,26 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class FirstExample
+public class FirstExample
 {
-    public void Sample1()
+    public string Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.First();
         //  result = "Red"
+        return result;
     }
 
-    public void Sample2()
+    public string Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
-        var result1 = colors.First(x => x.Length > 4);
-        //  result1 = "Green"
-        try
-        {
-            var result2 = colors.First(x => x.Length > 7);
-        }
-        catch (Exception)
-        {
-            // throws exception "Sequence contains no matching element"
-        }
+        var result = colors.First(x => x.Length > 4);
+        //  result = "Green"
+        return result;
+    }
+
+    public void Sample3()
+    {
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
+        var result = colors.First(x => x.Length > 7);
+        // throws InvalidOperationException: "Sequence contains no matching element"
     }
 }

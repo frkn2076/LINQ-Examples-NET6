@@ -1,17 +1,19 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class CountExample
+public class CountExample
 {
-    public void Sample1()
+    public int Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Count();
         //  result = 4
+        return result;
     }
 
-    public void Sample2()
+    public int Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Count(item => item.Length == 5);
         //  result = 2
+        return result;
     }
 }

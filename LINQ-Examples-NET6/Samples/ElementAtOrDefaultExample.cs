@@ -1,21 +1,35 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class ElementAtOrDefaultExample
+public class ElementAtOrDefaultExample
 {
-    public void Sample1()
+    public string Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.ElementAtOrDefault(1);
         //  result = "Green"
-        var result2 = colors.ElementAtOrDefault(7);
-        //  result2 = null
+        return result;
     }
 
-    public void Sample2()
+    public string Sample2()
+    {
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
+        var result = colors.ElementAtOrDefault(7);
+        //  result = null
+        return result;
+    }
+
+    public string Sample3()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.ElementAtOrDefault(new Index(2, true));
         //  result = "Blue"
-        var result2 = colors.ElementAtOrDefault(new Index(5, true));
-        //  result2 = null
+        return result;
+    }
+
+    public string Sample4()
+    {
+        var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
+        var result = colors.ElementAtOrDefault(new Index(5, true));
+        //  result = null
+        return result;
     }
 }

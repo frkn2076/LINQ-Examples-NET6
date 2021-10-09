@@ -1,31 +1,35 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class GroupByExample
+public class GroupByExample
 {
-    public void Sample1()
+    public IEnumerable<IGrouping<int, string>> Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.GroupBy(x => x.Length).ToList();
-        //  result = IEnumerable<IGrouping<int, string>>  { { Key: 3, ["Red"] }, { Key: 5, ["Green", "Black"] }, { Key: 4, ["Blue"] } }
+        //  result = IEnumerable<IGrouping<int, string>> { { Key: 3, ["Red"] }, { Key: 5, ["Green", "Black"] }, { Key: 4, ["Blue"] } }
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<IGrouping<int, string>> Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.GroupBy(x => x.Length, x => x.Substring(0, 1)).ToList();
-        //  result = IEnumerable<IGrouping<int, char>>  { { Key: 3, ['R'] }, { Key: 5, ['G', 'B'] }, { Key: 4, ['B'] } }
+        //  result = IEnumerable<IGrouping<int, string>> { { Key: 3, ["R"] }, { Key: 5, ["G", "B"] }, { Key: 4, ["B"] } }
+        return result;
     }
 
-    public void Sample3()
+    public IEnumerable<IGrouping<string, string>> Sample3()
     {
         var colors = new List<string>() { "Red", "Green", "blue", "Black" };
         var result = colors.GroupBy(x => x.Substring(0, 1), StringComparer.OrdinalIgnoreCase).ToList();
-        //  result = IEnumerable<IGrouping<string, string>>  { { Key: "R", ["Red"] }, { Key: "G", ["Green"] }, { Key: "b", ["blue", "Black"] } }
+        //  result = IEnumerable<IGrouping<string, string>> { { Key: "R", ["Red"] }, { Key: "G", ["Green"] }, { Key: "b", ["blue", "Black"] } }
+        return result;
     }
 
-    public void Sample4()
+    public IEnumerable<IGrouping<string, string>> Sample4()
     {
         var colors = new List<string>() { "Red", "Green", "blue", "Black" };
         var result = colors.GroupBy(x => x.Substring(0, 1), x => x.Substring(0, 1), StringComparer.OrdinalIgnoreCase).ToList();
-        //  result = IEnumerable<IGrouping<string, char>>  { { Key: "R", ['R'] }, { Key: "G", ['G'] }, { Key: "b", ['b', 'B'] } }
+        //  result = IEnumerable<IGrouping<string, char>> { { Key: "R", ["R"] }, { Key: "G", ["G"] }, { Key: "b", ["b", "B"] } }
+        return result;
     }
 }
