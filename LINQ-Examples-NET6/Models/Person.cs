@@ -1,2 +1,2 @@
 ﻿namespace LINQ_Examples_NET6.Models;
-record Person(string Name, string Surname);
+public record Person(string Name, string Surname);
