@@ -4,7 +4,7 @@ using LINQ_Examples_NET6.Models;
 namespace LINQ_Examples_NET6.Samples;
 public class OrderByExample
 {
-    public void Sample1()
+    public IOrderedEnumerable<Pet> Sample1()
     {
         var barley = new Pet("Barley", "Terry");
         var boots = new Pet("Boots", "Terry");
@@ -18,10 +18,11 @@ public class OrderByExample
         //  { Name = "Boots", Owner = "Terry"},
         //  { Name = "Daisy", Owner = "Magnus"},
         //  { Name = "Whiskers", Owner = "Charlotte"}
-        //  ] }
+        //  ] },
+        return result;
     }
 
-    public void Sample2()
+    public IOrderedEnumerable<Pet> Sample2()
     {
         var barley = new Pet("Barley", "Terry");
         var boots = new Pet("Boots", "Terry");
@@ -36,5 +37,6 @@ public class OrderByExample
         //  { Name = "Barley", Owner = "Terry"},
         //  { Name = "Whiskers", Owner = "Charlotte"}
         //  ] }
+        return result;
     }
 }

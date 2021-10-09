@@ -1,17 +1,19 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class SelectExample
+public class SelectExample
 {
-    public void Sample1()
+    public IEnumerable<int> Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Select(x => x.Length);
         //  result = IEnumerable<int> { 3, 5, 4, 5 };
+        return result;
     }
 
-    public void Sample2()
+    public IEnumerable<string> Sample2()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Select((v, i) => $"{v}-{i}");
-        //  result = IEnumerable<int> { "Red-0", "Green-1", "Blue-2", "Black-3" };
+        //  result = IEnumerable<string> { "Red-0", "Green-1", "Blue-2", "Black-3" };
+        return result;
     }
 }

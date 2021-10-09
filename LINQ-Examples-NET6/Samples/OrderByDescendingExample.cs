@@ -2,9 +2,9 @@
 using LINQ_Examples_NET6.Models;
 
 namespace LINQ_Examples_NET6.Samples;
-class OrderByDescendingExample
+public class OrderByDescendingExample
 {
-    public void Sample1()
+    public IOrderedEnumerable<Pet> Sample1()
     {
         var barley = new Pet("Barley", "Terry");
         var boots = new Pet("Boots", "Terry");
@@ -19,9 +19,10 @@ class OrderByDescendingExample
         //  { Name = "Boots", Owner = "Terry"},
         //  { Name = "Barley", Owner = "Terry"}
         //  ] }
+        return result;
     }
 
-    public void Sample2()
+    public IOrderedEnumerable<Pet> Sample2()
     {
         var barley = new Pet("Barley", "Terry");
         var boots = new Pet("Boots", "Terry");
@@ -36,5 +37,6 @@ class OrderByDescendingExample
         //  { Name = "Boots", Owner = "Terry"}
         //  { Name = "Daisy", Owner = "Magnus"},
         //  ] }
+        return result;
     }
 }

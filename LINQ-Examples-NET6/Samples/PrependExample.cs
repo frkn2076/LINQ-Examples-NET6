@@ -1,10 +1,11 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class PrependExample
+public class PrependExample
 {
-    public void Sample1()
+    public IEnumerable<string> Sample1()
     {
         var colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         var result = colors.Prepend("White");
-        //  result = List<string> { "White", "Red", "Green", "Blue", "Black" }
+        //  result = IEnumerable<string> { "White", "Red", "Green", "Blue", "Black" }
+        return result;
     }
 }

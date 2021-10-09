@@ -1,10 +1,11 @@
 ﻿namespace LINQ_Examples_NET6.Samples;
-class ReverseExample
+public class ReverseExample
 {
-    public void Sample1()
+    public IEnumerable<string> Sample1()
     {
         IEnumerable<string> colors = new List<string>() { "Red", "Green", "Blue", "Black" };
         colors = colors.Reverse();
-        //  colors = IEnumerable<string> { "Black", "Blue", "Green", "Red" }
+        // colors = IEnumerable<string> { "Black", "Blue", "Green", "Red" }
+        return colors;
     }
 }
