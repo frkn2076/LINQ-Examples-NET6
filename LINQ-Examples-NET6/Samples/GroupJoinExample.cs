@@ -16,7 +16,7 @@ public class GroupJoinExample
         var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) 
             => new Owner(person, petCollection.Select(x => x.Name).ToList()));
 
-        //  result = IEnumerable<GroupJoinIterator>  { [
+        //  result = IEnumerable<Owner>  { [
         //  { OwnerName = "Magnus", Pets = ["Daisy"] },
         //  { OwnerName = "Terry", Pets = ["Boots"] },
         //  { OwnerName = "terry", Pets = ["Barley"] },
@@ -38,7 +38,7 @@ public class GroupJoinExample
         var result = people.GroupJoin(pets, person => person, pet => pet.Owner, (person, petCollection) 
             => new Owner(person, petCollection.Select(x => x.Name).ToList()), StringComparer.OrdinalIgnoreCase);
 
-        //  result = IEnumerable<GroupJoinIterator>  { [
+        //  result = IEnumerable<Owner>  { [
         //  { OwnerName = "Magnus", Pets = ["Daisy"] },
         //  { OwnerName = "Terry", Pets = ["Barley", "Boots"] },
         //  { OwnerName = "terry", Pets = ["Barley", "Boots"] },
