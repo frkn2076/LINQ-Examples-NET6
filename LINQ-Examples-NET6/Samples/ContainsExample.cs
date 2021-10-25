@@ -5,7 +5,7 @@ public class ContainsExample
     {
         var numbers = new List<int>() { 1, 2, 3, 4, 5 };
         var result = numbers.Contains<int>(1);
-        //  result = 1 == 3 || 2 == 3 || 3 == 3 || 4 == 3 || 5 == 3
+        //  result = 1 == 1 || 2 == 1 || 3 == 1 || 4 == 1 || 5 == 1
         return result;
     }
 
